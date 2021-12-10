@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>JulsEstorco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .header-background {
+            background-color: transparent;
+            background-image: linear-gradient(rgba(107, 202, 209, 0.116), rgba(107, 202, 209, 0.116)), url(./src/images/pnclass.png);
+            min-height: 100vh;
+            overflow: visible;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: static;
+            display: block;
+            background-attachment: fixed;
+        }
+
+        .sticky-nav {
+            position: sticky;
+            padding: 12px;
+            background-color: white;
+
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            display: block;
+        }
+
+        .navbar-brand:hover {
+            color: rgb(58, 179, 219);
+            transition: 0.3s;
+        }
+
+        #links a {
+            padding-left: 15px;
+            color: rgb(0, 0, 0);
+            font-size: 15px;
+        }
+
+        #links a.active {
+            color: rgb(58, 179, 219);
+        }
+
+        #links a::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background-color: rgb(136, 209, 233);
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+
+        }
+
+        #links a:hover::after {
+            width: 100%;
+
+        }
+
+        .navbar-toggler {
+            border: solid white;
+            padding: 8px 6px;
+        }
+
+        .navbar-toggler span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            border: 1px;
+            background: lightblue;
+        }
+
+        .navbar-toggler span+span {
+            margin-top: 3px;
+            width: 22px;
+
+        }
+
+        .navbar-toggler span+span+span {
+            width: 22px;
+        }
+
+        #pnclass {
+            background-color: white;
+            text-align: center;
+            width: 50%;
+        }
+
+        .btn:hover {
+            background-color: orange;
+            transition: 0.5s;
+        }
+
+
+        /* #journey_gallery {
+            text-align: center;
+            margin-top: 5mm;
+        }
+
+        #journey_gallery h3 {
+            font-weight: 600;
+        } */
+
+        .container-fluid h1 {
+            color: black;
+            
+        }
+
+        .container-fluid p {
+            color: black;
+            font-size: 13px;
+            text-shadow: none;
+        }
+
+        .memories {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .memories .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(67, 67, 75, 0.6);
+            padding: 30px;
+            display: flex;
+            align-items: flex-end;
+            transition: all 0.4s ease;
+            opacity: 0;
+        }
+
+        .memories img {
+            transition: all 0.4s ease;
+            width: 100%;
+        }
+
+        .memories:hover .overlay {
+            opacity: 1;
+        }
+
+        .memories:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay h4 {
+            font-family: Arial;
+            font-size: 13px;
+        }
+
+        .overlay h6 {
+            font-size: 12px;
+            font-family: Arial;
+        }
+
+
+        /* .container-lg {
+            width: 90%;
+            padding: 20px;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+        .col {
+            width: 250px;
+            margin: 0 5px;
+            transition: .4s;
+        }
+
+        .col img {
+            display: block;
+            width: 100%
+        }
+
+        .col:hover {
+            transform: scale(1.3);
+            z-index: 2;
+        } */
+
+        #foot {
+            margin-top: 10mm;
+            margin-bottom: 0%;
+            background-color: lightblue;
+            height: 20mm;
+            text-align: center;
+        }
+
+        .footer {
+            padding: 20px, 12px;
+            margin-top: 5mm;
+
+        }
+
+        @media (max-width: 375px) {
+            * {
+                text-align: center;
+                margin-top: 0%;
+                font-size: 10px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-background">
+        <div class="sticky-nav">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">Be I n s p i r e d</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="life.html">Life</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link active" href="PN Journey.html">PNJourney</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="Thoughts.html">Thoughts</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="Study.html">Study</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="pnclass" class=" container">
+            <h5 style="margin-top: 10mm;"> Trust • Responsibility • Solidarity • Respect • Demanding approach</h5>
+            <img src="./src/images/pnlogo.png" style="width: 25%;">
+            <div class="mt-1">
+                <h1 style=" text-align: center;">PNP Batch 2023</h1>
+                <p style="text-align: center;">The Unseentax Techies who will strive hard despite every circumstance.
+                    For our loved ones, for our dreams, we will survive, no matter what!</p>
+                <div class="column text-center p-3">
+                    <a href="https://www.passerellesnumeriques.org/en/" class="btn btn-info">Explore More!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="pnmemories">
+        <div class="container-fluid bg-light">
+            <div class="row mb-5 mt-3">
+                <div class="col-md-8 mx-auto text-center">
+                    <h1 class="FINE mt-3">My Journey as PNP Scholar</h1>
+                    <p class="text-light">
+
+                    </p>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-3  col-sm-6">
+                    <div class="memories">
+                        <img src="./src/images/covid (1).png" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">New Journey Begins</h4>
+                                <h6 class="text-white">Live to the Fullest</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="memories">
+                        <img src="./src/images/pbl1.png" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">The Solarisers</h4>
+                                <h6 class="text-white">Parish of St. Catherine of Alexandria</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3  col-sm-6">
+                    <div class="memories">
+                        <img src="./src/images/covid (1).png" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">Covid Positive</h4>
+                                <h6 class="text-white">Circular plaza right smack in the heart of the city</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="memories">
+                        <img src="./src/images/javafam3.png" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">Java Family</h4>
+                                <h6 class="text-white">Jose Abad Santos</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-lg-3 col-sm-6">
+                    <div class="memories">
+                        <img src="./src/images/vax1.png" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">First Dose</h4>
+                                <h6 class="text-white">Jose Abad Santos</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3  col-sm-6">
+                    <div class="memories">
+                        <img src="./src/images/vax3.png" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">Sinovaccinated</h4>
+                                <h6 class="text-white">Christian Misa</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="memories">
+                        <img src="./src/images/uscgallery.jpeg" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">Beloved School</h4>
+                                <h6 class="text-white">Jose Abad Santos</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3  col-sm-6">
+                    <div class="memories">
+                        <img src="./src/images/halloween2.png" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">Halloween Cup</h4>
+                                <h6 class="text-white">Christian Misa</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="memories">
+                        <img src="./src/images/halloween1.png" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">PN Halloween Party</h4>
+                                <h6 class="text-white">Jose Abad Santos</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3  col-sm-6">
+                    <div class="memories">
+                        <img src="./src/images/sbo.png" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">Student Body Officers</h4>
+                                <h6 class="text-white">Christian Misa</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="memories">
+                        <img src="./src/images/halloween1.png" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">PN Halloween Party</h4>
+                                <h6 class="text-white">Jose Abad Santos</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3  col-sm-6">
+                    <div class="memories">
+                        <img src="./src/images/sbo.png" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">Student Body Officers</h4>
+                                <h6 class="text-white">Christian Misa</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- <div id="journey_gallery" class="container">
+        <div>
+            <h3>My Journey as PNP Scholar</h3>
+            <hr>
+        </div>
+
+        <div class="container mt-5">
+            <h4 style="text-align: center;">Quarantined @Mabolo due to Covid</h4>
+
+        </div>
+    </div>
+
+    <section style="margin-top:-20mm" class="gallery min-vh-100">
+        <div class="container-lg">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                <div class="col">
+                    <img src="./src/images/covid.png" class="gallery-item">
+                </div>
+                <div class="col">
+                    <img src="./src/images/covid (1).png" class="gallery-item">
+                </div>
+                <div class="col">
+                    <img src="./src/images/covid2.png" class="gallery-item">
+                </div>
+                <div class="col">
+                    <img src="./src/images/covid3.png" class="gallery-item">
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: -15mm" class="container">
+            <h4 style="text-align: center;">Java Family</h4>
+
+        </div>
+
+        <div style="margin-top: 5mm" class="container-lg">
+            <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+                <div class="col">
+                    <img src="./src/images/javafam.png" class="gallery-item">
+                </div>
+                <div class="col">
+                    <img src="./src/images/javafam2.png" class="gallery-item">
+                </div>
+                <div class="col">
+                    <img src="./src/images/javafam3.png" class="gallery-item">
+                </div>
+                <div class="col">
+                    <img src="./src/images/javafam4.jpg" class="gallery-item">
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: -15mm" class="container">
+            <h4 style="text-align: center;">Halloween Cup/Party</h4>
+
+        </div>
+
+        <div style="margin-top: 5mm" class="container-lg">
+            <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+                <div class="col">
+                    <img src="./src/images/halloween1.png" class="gallery-item">
+                </div>
+                <div class="col">
+                    <img src="./src/images/halloween2.png" class="gallery-item">
+                </div>
+                <div class="col">
+                    <img src="./src/images/halloween3.png" class="gallery-item">
+                </div>
+                <div class="col">
+                    <img src="./src/images/sbo.png" class="gallery-item">
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: -15mm" class="container">
+            <h4 style="text-align: center;">Covid19 Vaccination</h4>
+
+        </div>
+
+        <div style="margin-top: 5mm" class="container-lg">
+            <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+                <div class="col">
+                    <img src="./src/images/vax1.png" class="gallery-item">
+                </div>
+                <div class="col">
+                    <img src="./src/images/vax2.png" class="gallery-item">
+                </div>
+                <div class="col">
+                    <img src="./src/images/vax3.png" class="gallery-item">
+                </div>
+                <div class="col">
+                    <img src="./src/images/vax4.png" class="gallery-item">
+                </div>
+            </div>
+        </div> -->
+
+
+
+
+    <div id="foot" class="container-fluid">
+        <div class="footer"><br>
+            <i style="padding: 12px; cursor: pointer; color: rgb(54, 10, 17)" class="bi bi-facebook"></i>
+            <i style="padding: 12px; cursor: pointer; color: rgb(54, 10, 17)" class="bi bi-instagram"></i>
+            <i style="padding: 12px; cursor: pointer; color: rgb(54, 10, 17)" class="bi bi-twitter"></i>
+        </div>
+        <p style="padding-top: 5px;"> Created with <i style="color: rgb(54, 10, 17)" class="bi bi-heart"></i> by
+            Juls Estorco</p>
+    </div>
+
+
+    </section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

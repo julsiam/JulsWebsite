@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JulsEstorco</title>
+    <!-- additional links for fonts and icons -->
+    <script src="https://kit.fontawesome.com/aada78db3c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap bundle -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .header-background {
+            height: auto;
+            width: 100%;
+            position: static;
+            display: block;
+            background-image: url(./src/images/tho.png);
+            min-height: 85vh;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: static;
+            display: block;
+            background-attachment: fixed;
+        }
+
+        .sticky-nav {
+            position: sticky;
+            padding: 12px;
+            background-color: grey;
+
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+            display: block;
+        }
+
+        .navbar-brand:hover {
+            color: black;
+            transition: 0.3s;
+        }
+
+        #links a {
+            padding-left: 15px;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+        }
+
+        #links a.active {
+            color: black;
+        }
+
+        #links a::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background-color: black;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+
+        }
+
+        #links a:hover::after {
+            width: 100%;
+
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 10px;
+            outline: none;
+        }
+
+        .navbar-toggler span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            border: 1px;
+            background: black;
+        }
+
+        .navbar-toggler span+span {
+            margin-top: 4px;
+            width: 22px;
+
+        }
+
+        .navbar-toggler span+span+span {
+            width: 22px;
+        }
+
+        #thoughtsko {
+            text-align: center;
+            color: white;
+        }
+
+        #foot {
+            margin-top: 10mm;
+            margin-bottom: 0%;
+            background-color: rgb(128, 128, 128);
+            height: 20mm;
+            text-align: center;
+        }
+
+        #modalthought{
+            text-align: center; 
+            justify-content: center;
+        }
+
+        .footer {
+            padding: 20px, 12px;
+            margin-top: 5mm;
+
+        }
+
+        @media (max-width: 450px) {
+            * {
+                text-align: center;
+                margin-top: 0%;
+                font-size: 8px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-background">
+        <div class="sticky-nav">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">Be I n s p i r e d</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="life.html">Life</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="PN Journey.html">PNJourney</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link active" href="Thoughts.html">Thoughts</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="Study.html">Study</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div style="line-height: 500px; height: 500px; text-align: center;" class="container">
+            <p style="line-height: 1.5; display: inline-block; vertical-align: middle; color: white;"> Lorem Ipsum is simply dummy
+                text of the
+                printing
+                and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                ever
+                since the
+                1500s.</p>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="modalthought" class="p-5">
+        <div class="row g-3">
+            <div style="display: flex;box-shadow: 0 5px 4px  grey;" class="col-12 col-md-6 col-lg-3">
+                <div class="container mt-3">
+                    <img style="width: 100%;" src="./src/./images/lesson.png" alt="">
+                    <h5>|"Great <strong> Lessons</strong>"</h5>
+                    <p>Life is our greatest teacher. It teaches us things we can’t learn from the book...</p>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#Modal1">
+                        Continue Reading
+                    </button>
+                </div>
+                <div class="modal fade" id="Modal1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h5 class="modal-title">"Great Lessons"</h5>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p style="text-align: left;">Life is our greatest teacher. It teaches us things we
+                                    can’t
+                                    learn from the book. <br> <br>
+                                    1.
+                                    In this exhausting world, you will always have your family to lift you up, to
+                                    fill
+                                    your present with hope, to provide your soul with motivation and to support your
+                                    heart with unending and unconditional love. We can go wherever we want, we may
+                                    settle in different directions but we will always go back to the roots where we
+                                    started, FAMILY! <br> <br> 2. In this world, no one stays by your side forever.
+                                    It’s
+                                    tough but it is what it is. So you have to learn doing things alone. Never depend
+                                    on
+                                    others. BE INDEPENDENT! <br> <br> 3. In this changing world, remember that it’s not
+                                    you
+                                    versus the other people. It should be you versus the person you were yesterday.
+                                    Don’t spend your energy trying to compete with others. You are crossing different
+                                    paths and you shouldn’t depend yours on them. MIND YOUR OWN BUSINESS! <br> <br> 4.
+                                    In
+                                    this world where imperfection is a big deal, remember to let go of the idea on
+                                    impressing others. Never beg for attention and never fit in just to be accepted. As
+                                    long as you know who you are and what makes you happy, it doesn’t matter how others
+                                    will see you. You are unique on your own different way. <br> <br> 5. In this world
+                                    where
+                                    nothing is constant but change, you should learn to appreciate what you have,
+                                    before
+                                    time pushes you to appreciate what you had. Spend your time wisely with the people
+                                    you love. You don’t know, your time with them is already limited. BE APPRECIATIVE!
+                                    <br> <br> 6. In this world where challenges and sufferings exist, remember to
+                                    always
+                                    look
+                                    for the brighter side. “Everything happens for a reason”. At the right time, your
+                                    heartbreaks will turn into breakthroughs. Always be positive. CLAIM IT! <br><br>8.
+                                    Accept! Move on! Let go! Let God!...Life goes on!
+
+                                </p>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex;box-shadow: 0 5px 2px  grey;" class="col-12 col-md-6 col-lg-3">
+                <div class="container mt-3">
+                    <img style="width: 100%;" src="./src/./images/dream.png" alt="">
+                    <h5>|"The Beauty of <strong> Being Alone</strong>"</h5>
+                    <p>We tend to assume that people's expectations from </p>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#Modal2">
+                        Continue Reading
+                    </button>
+                </div>
+                <div class="modal fade" id="Modal2">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h5 class="modal-title">"The Beauty of Being Alone"</h5>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p> Lorem Ipsum is simply dummy text of the
+                                    printing
+                                    and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                                    ever
+                                    since the
+                                    1500s. Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                    dummy
+                                    text
+                                    ever since
+                                    the 1500s. </p>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex;box-shadow: 0 5px 4px  grey;" class="col-12 col-md-6 col-lg-3">
+                <div class="container mt-3">
+                    <img style="width: 100%;" src="./src/./images/gone.png" alt="">
+                    <h5><strong>|"She's </strong> Gone"</h5>
+                    <p>I held her hand for the last moment and slowly closed my eyes. I just lost the... </p>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#Modal3">
+                        Continue Reading
+                    </button>
+                </div>
+                <div class="modal fade" id="Modal3">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h5 class="modal-title"><strong>"She's </strong> Gone"</h5>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p> I was walking home when someone called my name. As I turned back, I saw how
+                                    terrified he was. He was anxious and disturbed. I asked him what's the matter and
+                                    what he told me were enough to stop my senses. After hearing those words, I felt a
+                                    bang in my chest. A fire started to burn inside me that drove to the arise of
+                                    different emotions. There was a moment of deafening silence and I couldn't move. My
+                                    world just ubruptly stopped for an instance. My mind wasn't able to process
+                                    anything. After a while, I found myself running as fast as I could after the moment
+                                    of surprise. I was chasing my breath. I didn't know what to do. I was like a poor
+                                    rat chased by a lion.
+                                    When I arrived home, I could sense the mourning of everyone. It felt like a storm
+                                    just passed by, wiping everything in its way. Something unexplainable happened. I
+                                    felt suffocated, still chasing my breath. My feet didn't want to take a step.
+                                    Different emotions came in and I couldn't help it. But there's no turning back. I
+                                    was there already, so I continued.
+                                    Although I was in a complete chaos, I managed to enter the room. From there, I
+                                    couldn't stop my tears from bursting as I saw the woman on the corner lying on a
+                                    rough wooden bed. There's this unfathomable expression on her face and the coldness
+                                    enwrapped her being. I gave her a tight grip and from that moment, I realized
+                                    something. I just lost the most important person in the world. She's my mother
+                                    lying
+                                    in bed, lifeless.
+                                    After what happened, it felt like a catastrophe. Indeed, nothing in this world is
+                                    constant but change. Life must go on, besides, that's the reality. As you grow
+                                    older, you will lose people in your journey but what's more important is that you
+                                    had created memories with them. Memories that will forever be cherished.</p>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex;box-shadow: 0 5px 4px  grey;" class="col-12 col-md-6 col-lg-3">
+                <div class="container mt-3">
+                    <img style="width: 100%;" src="./src/./images/love1.png" alt="">
+                    <h5>|"You Also <strong> Expect"</strong></h5>
+                    <p>We tend to assume that people's expectations from us are the hindrances...</p>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#Modal4">
+                        Continue Reading
+                    </button>
+                </div>
+                <div class="modal fade" id="Modal4">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">"You Also Expect"</h4>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p>You know, sometimes we are in a situation where expectations from our loved ones are
+                                    way too high to meet and too many to take. Actually I think it's the nature for us
+                                    people. But lemme me ask you this, is it only the expectations of people around you
+                                    thats making your life way complicated? Or is it also YOUR EXPECTATIONS FOR
+                                    YOURSELF? Come to think of it. Don't you set standards and expectations for your
+                                    own
+                                    self to reach as well? Sometimes we tend to assume that people's expectations from
+                                    us are the hindrances that prevented is from our freedom, that limiting us from
+                                    what
+                                    we can do, stopping us to expand our horizon and going out from our own shells but
+                                    have you noticed your expectations for yourself? Not just because there are people
+                                    expecting it from you that's why you worked hard for it but because of your own
+                                    standard as well. Did you get my point? Worse is, when you grew up dominating among
+                                    others, like in everything, in class, in the workplace or wherever, you always got
+                                    on top, along with the praises, honors, and awards, expectations from people around
+                                    you and for yourself will also exist. And as time goes by, it will gradually occupy
+                                    your thoughts. And by that instance, you develop a sense of fear on disappointing
+                                    yourself and people around you. You are not alone.</p>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; justify-content: center;" class="p-5">
+        <div class="row g-3">
+            <div style="display: flex;box-shadow: 0 5px 4px  grey;" class="col-12 col-md-6 col-lg-3">
+                <div class="container mt-3">
+                    <img style="width: 100%;" src="./src/./images/modal.png" alt="">
+                    <h5>|"Leaving Everything" <strong> Behind</strong></h5>
+                    <p>..and today, I leave with uncertainties...</p>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#Modal5">
+                        Continue Reading
+                    </button>
+                </div>
+                <div class="modal fade" id="Modal5">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h5>|"Leaving Everything" <strong> Behind</strong></h5>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p style="text-align: left;">Life is our greatest teacher. It teaches us things we
+                                    can’t
+                                    learn from the book. <br> <br>
+                                    1.
+                                    In this exhausting world, you will always have your family to lift you up, to
+                                    fill
+                                    your present with hope, to provide your soul with motivation and to support your
+                                    heart with unending and unconditional love. We can go wherever we want, we may
+                                    settle in different directions but we will always go back to the roots where we
+                                    started, FAMILY! <br> <br> 2. In this world, no one stays by your side forever.
+                                    It’s
+                                    tough but it is what it is. So you have to learn doing things alone. Never depend
+                                    on
+                                    others. BE INDEPENDENT!
+
+                                </p>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex;box-shadow: 0 5px 2px  grey;" class="col-12 col-md-6 col-lg-3">
+                <div class="container mt-3">
+                    <img style="width: 100%;" src="./src/./images/modal1.png" alt="">
+                    <h5><strong>|"Dealing with </strong>Dissapointment"</h5>
+                    <p>I doubt my capabilities. I doubt my future... </p>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#Modal6">
+                        Continue Reading
+                    </button>
+                </div>
+                <div class="modal fade" id="Modal6">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h5><strong>|"Dealing with </strong>Dissapointment"</h5>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p> Lorem Ipsum is simply dummy text of the
+                                    printing
+                                    and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                                    ever
+                                    since the
+                                    1500s.  </p>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex;box-shadow: 0 5px 4px  grey;" class="col-12 col-md-6 col-lg-3">
+                <div class="container mt-3">
+                    <img style="width: 100%;" src="./src/./images/modal4.png" alt="">
+                    <h5><strong>|"Missing </strong> Them"</h5>
+                    <p>Whenever your feeling down, just go back to the people who planted...</p>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#Modal7">
+                        Continue Reading
+                    </button>
+                </div>
+                <div class="modal fade" id="Modal7">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h5><strong>|"Missing </strong> Them"</h5>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p> I was walking home when someone called my name. As I turned back, I saw how
+                                    terrified he was. He was anxious and disturbed. I asked him what's the matter and
+                                    what he told me were enough to stop my senses. After hearing those words, I felt a
+                                    bang in my chest. A fire started to burn inside me that drove to the arise of
+                                    different emotions. There was a moment of deafening silence and I couldn't move. My
+                                    world just ubruptly stopped for an instance. My mind wasn't able to process
+                                    anything. After a while, I found myself running as fast as I could after the moment
+                                    of surprise. I was chasing my breath. I didn't know what to do. I was like a poor
+                                    rat chased by a lion.
+                                    When I arrived home, I could sense the mourning of everyone. It felt like a storm
+                                    just passed by, wiping everything in its way. Something unexplainable happened. I
+                                    felt suffocated, still chasing my breath. My feet didn't want to take a step.
+                                    Different emotions came in and I couldn't help it. But there's no turning back. I
+                                    was there already, so I continued.
+                                    Although I was in a complete chaos, I managed to enter the room. From there, I
+                                    couldn't stop my tears from bursting as I saw the woman on the corner lying on a
+                                    rough wooden bed. There's this unfathomable expression on her face and the coldness
+                                    enwrapped her being. I gave her a tight grip and from that moment, I realized
+                                    something. I just lost the most important person in the world. She's my mother
+                                    lying
+                                    in bed, lifeless.
+                                    After what happened, it felt like a catastrophe. Indeed, nothing in this world is
+                                    constant but change. Life must go on, besides, that's the reality. As you grow
+                                    older, you will lose people in your journey but what's more important is that you
+                                    had created memories with them. Memories that will forever be cherished.</p>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex;box-shadow: 0 5px 4px  grey;" class="col-12 col-md-6 col-lg-3">
+                <div class="container mt-3">
+                    <img style="width: 100%;" src="./src/./images/modal2.png" alt="">
+                    <h5>|"Doing It <strong> Right"</strong></h5>
+                    <p>I came to realize that sin can lead to another sin and it is something...</p>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#Modal8">
+                        Continue Reading
+                    </button>
+                </div>
+                <div class="modal fade" id="Modal8">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h5>|"Doing It <strong> Right"</strong></h5>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p>You know, sometimes we are in a situation where expectations from our loved ones are
+                                    way too high to meet and too many to take. Actually I think it's the nature for us
+                                    people. But lemme me ask you this, is it only the expectations of people around you
+                                    thats making your life way complicated? Or is it also YOUR EXPECTATIONS FOR
+                                    YOURSELF? Come to think of it. Don't you set standards and expectations for your
+                                    own
+                                    self to reach as well? Sometimes we tend to assume that people's expectations from
+                                    us are the hindrances that prevented is from our freedom, that limiting us from
+                                    what
+                                    we can do, stopping us to expand our horizon and going out from our own shells but
+                                    have you noticed your expectations for yourself? Not just because there are people
+                                    expecting it from you that's why you worked hard for it but because of your own
+                                    standard as well. Did you get my point? Worse is, when you grew up dominating among
+                                    others, like in everything, in class, in the workplace or wherever, you always got
+                                    on top, along with the praises, honors, and awards, expectations from people around
+                                    you and for yourself will also exist. And as time goes by, it will gradually occupy
+                                    your thoughts. And by that instance, you develop a sense of fear on disappointing
+                                    yourself and people around you. You are not alone.</p>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="text-center">
+        <a href="Thoughts.html"> <button type="button" class="btn btn-outline-secondary"><i> View Less</i></button></a>
+    </div>
+
+
+    <div id="foot" class="container-fluid">
+        <div class="footer"><br>
+            <i style="padding: 12px; cursor: pointer; color: rgb(54, 10, 17)" class="bi bi-facebook"></i>
+            <i style="padding: 12px; cursor: pointer; color: rgb(54, 10, 17)" class="bi bi-instagram"></i>
+            <i style="padding: 12px; cursor: pointer; color: rgb(54, 10, 17)" class="bi bi-twitter"></i>
+        </div>
+        <p style="padding-top: 5px;"> Created with <i style="color: black" class="bi bi-heart"></i> by
+            Juls Estorco</p>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

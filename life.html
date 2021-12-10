@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JulsEstorco</title>
+    <!-- external css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- additional links for fonts and icons -->
+    <script src="https://kit.fontawesome.com/aada78db3c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap bundle -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* header and navigation */
+    .header-background {
+        background-color: transparent;
+        background-image: url(./src/images/life.png);
+        min-height: 85vh;
+        overflow: visible;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: static;
+        display: block;
+        background-attachment: fixed;
+    }
+    
+
+    .sticky-nav {
+        position: sticky;
+        padding: 12px;
+        background-color: rgba(201, 70, 53, 0.767);
+
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+        display: block;
+    }
+
+    .navbar-brand:hover {
+        color: rgb(0, 255, 200);
+        transition: 0.3s;
+    }
+
+    #links a {
+        padding-left: 15px;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+    }
+
+    #links a.active {
+        color: rgb(0, 255, 200);
+    }
+
+    #links a::after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background-color: rgb(0, 255, 200);
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+
+    }
+
+    #links a:hover::after {
+        width: 100%;
+
+    }
+
+    .navbar-toggler {
+        border: none;
+        padding: 10px;
+        outline: none;
+    }
+
+    .navbar-toggler span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border: 1px;
+        background: rgb(0, 255, 200);
+    }
+
+    .navbar-toggler span+span {
+        margin-top: 4px;
+        width: 22px;
+
+    }
+
+    .navbar-toggler span+span+span {
+        width: 22px;
+    }
+
+    @media (max-width: 375px) {
+        * {
+            text-align: center;
+            margin-top: 0%;
+            font-size: 10px;
+
+        }
+    }
+
+    #foot {
+        margin-top: 10mm;
+        margin-bottom: 0%;
+        background-color: rgba(201, 70, 53, 0.767);
+        height: 20mm;
+        text-align: center;
+
+    }
+
+    .footer {
+        padding: 20px, 12px;
+        margin-top: 5mm;
+
+    }
+</style>
+</head>
+
+<body>
+    <div class="header-background">
+        <div class="sticky-nav">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">Be I n s p i r e d</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link active" href="life.html">Life</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="PN Journey.html">PNJourney</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="Thoughts.html">Thoughts</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="Study.html">Study</a>
+                            </li>
+                            <li id="links" class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+    <section id="about_section" class="section-padding about section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-lg-6 column-right mt-5">
+                    <img style=" width: 100%;" src="./src/images/fam.png">
+                </div>
+                <div class="col-sm-6">
+                    <div class="section_title"> <br> <br> <br>
+                        <div class="section_subtitle">
+                            <h3> <strong style="color: rgb(216, 79, 102)">|</strong>Everything is Just a Story </h3>
+                        </div> <br>
+                        <hr style="border: solid 2px rgb(238, 115, 135)">
+                        <h2><i> Life is not always what we expected to be so </i> <strong>we have to value every moment
+                                before it turns into
+                                memory. <br> </strong></h2>
+
+                    </div>
+
+                    <div class="about-item">
+                        <p> Hi everyone. On the 16th day of March 2002, a boy came to exist which
+                            fulfilled the
+                            wish
+                            of his parents to have a son. That’s me! I am Julecenio Estorco, sweet 16 with 3 years of
+                            experience.
+                            Enough to be engaged in the reality of life. I came from Canlaon City Negros Oriental but
+                            currently
+                            resides here at Talamban Cebu to pursue my greatest goal. I am the youngest in the family.
+                            I have
+                            four
+                            sisters, three of them have already settled down with their own family. My mother is Amparo
+                            Estorco
+                            and
+                            my father is Julecenio Angana. By the way, my father made me his junior but I don’t bring
+                            it as a
+                            suffix for some reasons. Maybe you get confused why I am bringing my mother’s surname
+                            rather than
+                            my
+                            father’s. </p>
+                        <p>Well, the history of my family is kind of different. My parents had different hometowns
+                            and
+                            because of financial instability, my mother was forced to find work and coincidentally, she
+                            found
+                            work
+                            as a housemaid for the sister of my father. My father’s family owned land before and they
+                            were
+                            privileged in life. So that's it, my parents met but the thing was, my father wasn't a
+                            young man
+                            anymore that time. He was married but separated yet gifted with two kids. His wife left
+                            them and
+                            went
+                            somewhere. So yah, we are just the second family, and maybe not maybe, yes, that's the
+                            reason why
+                            my
+                            father's family’s treatment of us isn’t nice until now.</p>
+                    </div>
+                </div>
+
+
+                <div class="mt-5 col-sm-6">
+                    <div class="about-item">
+                        <p>Going back, so my parents decided to build
+                            their own family, against all odds as they say. My father accepted my mother and my mother
+                            accepted
+                            my
+                            father as well as his kids. My mother told me that we were financially stable before, even
+                            though
+                            our
+                            family grew bigger but my father managed a land as his part from his family. After giving
+                            birth to
+                            their fourth child which is also a girl, somehow my parents lost their hope to have a boy
+                            then
+                            maybe
+                            accidentally, in a peaceful, romantic night where two souls collided with the same wish of
+                            having a
+                            baby boy, they made me. Then my mother gave birth to me, they were very happy. But
+                            everything has
+                            its
+                            opposite. That happiness equates grief. Or maybe I came to exist as someone will come to an
+                            end. </p>
+                        <p>After
+                            six months since I was born, my father passed away. I don’t get to see him. I don't even
+                            have a
+                            photograph of him. Sometimes, I ask myself whether I inherit his appearance, his height,
+                            his
+                            physique
+                            or anything. Whenever I see a child with his father, I feel envious. Like I just wish my
+                            father was
+                            still with us. I just wanna experience being piggybacked with a father, playing some sports
+                            with
+                            him,
+                            talking with him man to man, going out with him and being with him until I reach my dreams.
+                            I just
+                            want
+                            him to see me grow and become the man he wants me to be. I just want to fulfil his dreams
+                            for me
+                            but
+                            sadly, it won’t happen anymore as we are living in two different worlds now.</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-lg-6 column-right mt-5">
+                    <img style=" width: 100%;" src="./src/images/about.png">
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-6 column-right mt-5">
+                    <img style=" width: 100%;" src="./src/images/about.png">
+                </div>
+                <div class="col-sm-6 mt-5">
+                    <div class="about-item">
+                        <p> After that, after my fathers death, our state just became tough. My half-brother started to
+                            squander my
+                            father’s land. My mother just tolerated it as she didn’t want to be in an argument. My
+                            mother
+                            became a
+                            full time father and a mother to us. She started to work in others' farms, washed clothes
+                            in
+                            our
+                            neighbors, and did anything just to support our needs. My sisters had to go to school at
+                            least
+                            twice a
+                            week to raise our family. Worse was, the people we expected to help us, turned their back
+                            against
+                            us,
+                            my father’s family but it’s okay, as in the first place, they never treated us as family.
+                            It
+                            was
+                            very
+                            hard for my mother’s side yet she endured everything for us. Until I grew up and witnessed
+                            her
+                            struggles. But then again, she managed to plaster a curve in her face. She loved us, she
+                            loved
+                            me
+                            more.
+                            I’m her favorite among us siblings, she gave me more in everything and my whole life just
+                            depended
+                            on
+                            her. When I woke up in the morning, everything was all set. I was free. She filled the gaps
+                            in
+                            everything my father failed to do. I may not have told her how much I love her and how much
+                            grateful I
+                            am that she's my mother, but God knows how my heart wants to tell her those words. But I
+                            just
+                            too
+                            late
+                            to realize such thing. Now she’s gone and that’s my greatest and biggest regret in my life
+                            so
+                            far,
+                            to
+                            not be able to tell her “I love you, Ma”. </p>
+                        <p>Truly, life goes on. I thought that if I get wasted, what will be the reaction of my mother
+                            seeing her boy messed up with life? Besides, I still have my sisters that truly love me
+                            unconditionally. They kept on telling me that they are just on my side no matter what. I
+                            learned to
+                            accept that God has the reason why it happened. And I think I already know it, for me to
+                            become
+                            independent in life. After my mother passed, we settled with our eldest sister, (me and my
+                            fourth
+                            sister), we were still in junior high school at that time. That was a transition for me.
+                            Suddenly
+                            my
+                            life just changed. I learned to wake up early, cook for our breakfast, wash our own
+                            clothes,
+                            work
+                            on
+                            our neighbor’s farm just to have an allowance, sometimes we went to school without even a
+                            single
+                            penny. </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 mt-5">
+                    <div class="about-item">
+                        <p>Those were the times that I experienced trauma as my sister’s husband is a drunkard man and
+                            became
+                            violent whenever it happened. Gradually, I learned to accept the set up. I had to adjust as
+                            we just
+                            lived with them. It’s never easy. Sometimes I just didn't want to go home, afraid of what
+                            might
+                            happen
+                            later at night. I had nothing to do with it. Sometimes I just asked God why it happened but
+                            every
+                            season has a reason and a lesson. Gradually, I realize that life is survival. It just
+                            depends on
+                            how
+                            you handle every situation that comes.</p>
+                        <p>Until I pursued my senior high school, the set up was still the same. Sometimes, I had to
+                            sacrifice
+                            my
+                            allowance just to ride a motorcycle to go home as my brother-in-law couldn’t pick me up
+                            because
+                            he’s
+                            drunk or just didn’t want to. I had to work every weekend to have my allowance and for my
+                            projects
+                            and
+                            other school fees. Yet I survived. Despite everything, my sisters help me and support me in
+                            my
+                            whole
+                            journey. I graduated senior highschool and I am just very happy about that milestone. It
+                            felt like
+                            I
+                            have already proved and achieved something. And it's just something to be proud of.
+                            Truly God will never forsake us.</p>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-6 column-right mt-5">
+                    <img style=" width: 100%;" src="./src/images/about.png">
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-6 column-right mt-5">
+                    <img style=" width: 100%;" src="./src/images/about.png">
+                </div>
+                <div class="col-sm-6 mt-5">
+                    <div class="about-item">
+                        <p> During my 12th grade, Passerelles Numeriques came to our school
+                            and
+                            informed us about the scholarship that they offer. I had the urge to pursue it and
+                            fortunately,
+                            with
+                            God’s grace, I got qualified. Actually, I just wanted to find a job if ever I wouldn’t be
+                            qualified
+                            for
+                            PN as given that we are financially unstable, I can’t afford to go to college. Luckily, on
+                            the
+                            16th
+                            day of March, it was just the best birthday gift ever, Miss Irish called me saying “Welcome
+                            to
+                            PN,
+                            Julecenio”. I was so happy, it's an opportunity, a big opportunity. Although the course
+                            they
+                            offered
+                            isn't my first choice, I am willing to learn and I am ready to explore. I remember during
+                            our
+                            11th
+                            grade in our ICT subject, whenever we asked our teacher about some computer stuff, he just
+                            said
+                            “explore”. And yes, I am here to explore more. Furthermore, I am here for my dreams, for my
+                            family.
+                            They are the reasons for this. Whenever I look at their/our situations, I just find more
+                            reasons to
+                            achieve my goals, to keep going. They are my motivations for this journey. I left home with
+                            uncertainties about this track but one thing is for sure, this is for the sake of my
+                            biggest
+                            goal,
+                            to
+                            help my family out of the pit of poverty. Now, I am here and I am willing to take all the
+                            risk
+                            just
+                            to
+                            achieve it.</p>
+                        <p> Life is unpredictable. Indeed, nothing in this world is constant but change. Some things
+                            may
+                            not
+                            always
+                            be what we hope to be. Life is not always what we look up for. It changes every single move
+                            we
+                            make.
+                            Thus, every moment is valuable. We just have to grab the opportunity to express love,
+                            gratitude,
+                            and
+                            compassion to our loved ones when we are still with them before it's too late. We just have
+                            to
+                            value
+                            what we have before time pushes us to value what we had. Lift up everything to God. Dream
+                            more
+                            and
+                            make
+                            it happen. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div id="foot" class="container-fluid">
+        <div class="footer"><br>
+            <i style="padding: 12px; cursor: pointer; color: rgb(54, 10, 17)" class="bi bi-facebook"></i>
+            <i style="padding: 12px; cursor: pointer; color: rgb(54, 10, 17)" class="bi bi-instagram"></i>
+            <i style="padding: 12px; cursor: pointer; color: rgb(54, 10, 17)" class="bi bi-twitter"></i>
+        </div>
+        <p style="padding-top: 5px;"> Created with <i style="color: rgb(54, 10, 17)" class="bi bi-heart"></i> by
+            Juls Estorco</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
